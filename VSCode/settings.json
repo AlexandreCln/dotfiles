@@ -1,0 +1,106 @@
+{
+    /*------------------*/
+    /*  Display Config  */
+    /*------------------*/
+    
+    "editor.fontFamily": "'Jetbrains Mono'",
+    "workbench.activityBar.visible": true,
+  
+    /*--------------*/
+    /*  PHP Config  */
+    /*--------------*/
+  
+    "files.associations": { "*.module": "php" },
+    "php.suggest.basic": false,
+    "intelephense.files.associations": [
+      "*.php",
+      "*.phtml"
+    ],
+    "intelephense.files.exclude": [
+      "**/.git/**",
+      "**/.svn/**",
+      "**/.hg/**",
+      "**/CVS/**",
+      "**/.DS_Store/**",
+      "**/node_modules/**",
+      "**/bower_components/**",
+      "**/vendor/**/{Test,test,Tests,tests}/**/*Test.php"
+    ],
+    "[php]": {
+      "editor.defaultFormatter": "bmewburn.vscode-intelephense-client",
+      "editor.formatOnSave": true,
+      "editor.wordSeparators": "`~!@#%^&*()-=+[{]}\\|;:'\",.<>/?",
+    },
+    "emmet.includeLanguages": {
+      "twig": "html"
+    },
+  
+    /*--------------*/
+    /*  Vue Config  */
+    /*--------------*/
+  
+    "prettier.printWidth": 120,
+    "prettier.tabWidth": 2,
+    "prettier.singleQuote": true,
+    "prettier.useTabs": true,
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.tabSize": 2
+    },
+    "[vue]": {
+      "editor.defaultFormatter": "octref.vetur",
+      "editor.formatOnSave": false,
+      "editor.tabSize": 2
+    },
+    // Turn off Vetur's linting feature, to use ESLint and Prettier 
+    "vetur.validation.template": false,
+    "vetur.ignoreProjectWarning": true,
+    // Disable vetur snippets to avoid conflicts with Vue VSCode Snippets
+    "vetur.completion.scaffoldSnippetSources": {
+      "workspace": "",
+      "user": "",
+      "vetur": ""
+    },
+    "eslint.validate": [
+      "vue",
+      "html",
+      "javascript"
+    ],
+  
+    /*-----------------*/
+    /*  Editor Config  */
+    /*-----------------*/
+  
+    "editor.tabCompletion": "on", 
+    "editor.quickSuggestions": { "comments": true },
+    "editor.codeActionsOnSave": {
+      "source.fixAll": true
+    },
+    "diffEditor.ignoreTrimWhitespace": false,
+  
+    /*----------------*/
+    /*  Other Config  */
+    /*----------------*/
+  
+    "terminal.integrated.fontSize": 13,
+    "workbench.startupEditor": "newUntitledFile",
+    "emmet.excludeLanguages": [
+      "markdown"
+    ],
+    "vetur.format.defaultFormatterOptions": {
+  
+      "js-beautify-html": {
+        "wrap_attributes": "force-expand-multiline"
+      },
+      "prettyhtml": {
+        "printWidth": 100,
+        "singleQuote": false,
+        "wrapAttributes": false,
+        "sortAttributes": false
+      }
+    },
+    "update.mode": "manual",
+    "workbench.iconTheme": "ayu",
+    "workbench.colorTheme": "Nord",
+    "editor.fontSize": 13,
+  }
