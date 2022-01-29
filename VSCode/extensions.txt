@@ -1,0 +1,38 @@
+# Executes the following lines to install all my VSCode extensions.
+# ---
+# To obtain theses output lines, type the following command :
+# on Linux : code --list-extensions | xargs -L 1 echo code --install-extension
+# on Windows : code --list-extensions | % { "code --install-extension $_" }
+
+code --install-extension arcticicestudio.nord-visual-studio-code
+code --install-extension ban.quietlight-plus
+code --install-extension bmewburn.vscode-intelephense-client
+code --install-extension bubersson.theme-hop-light
+code --install-extension dbaeumer.vscode-eslint
+code --install-extension esbenp.prettier-vscode
+code --install-extension jamesmaj.easy-icons
+code --install-extension kube.theme-kay
+code --install-extension loilo.snazzy-light
+code --install-extension mariorodeghiero.vue-theme
+code --install-extension mblode.twig-language-2
+code --install-extension MehediDracula.php-namespace-resolver
+code --install-extension miguelsolorio.min-theme
+code --install-extension mikestead.dotenv
+code --install-extension mvllow.rose-pine
+code --install-extension octref.vetur
+code --install-extension perragnaredin.february-frost
+code --install-extension perragnaredin.september-steel
+code --install-extension phproberto.vscode-php-getters-setters
+code --install-extension praveenpuglia.tailwind-breeze
+code --install-extension sdras.night-owl
+code --install-extension sdras.vue-vscode-snippets
+code --install-extension teabyii.ayu
+code --install-extension thenikso.github-plus-theme
+code --install-extension uloco.theme-bluloco-dark
+code --install-extension uloco.theme-bluloco-light
+code --install-extension usernamehw.prism
+code --install-extension waderyan.gitblame
+code --install-extension wayou.vscode-todo-highlight
+code --install-extension whizkydee.material-palenight-theme
+code --install-extension wmaurer.vscode-jumpy
+code --install-extension yutent.one-plain
