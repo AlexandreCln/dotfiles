@@ -25,4 +25,5 @@ My personal customization files for Windows and/or Linux environment.
 - Install PowerLevel10k :
 - Install a [Nerd Font](https://www.nerdfonts.com/font-downloads) like “Fira Code“ or “Caskaydia Cove“.
 - Go to Settings → “Windows Powershell” profile → “Appearance” tab → “Font face”, and choose your newly installed Nerd Font.
-- Restart your Windows Terminal and verify everything looks good by running `oh-my-posh`.
+- Replace (or adjust) the content of _Microsoft.PowerShell_profile.ps1_ file with the one of this repo.
+- Restart your Windows Terminal and verify everything looks good. 
