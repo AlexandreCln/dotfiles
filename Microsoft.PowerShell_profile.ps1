@@ -1,5 +1,3 @@
-Clear-Host # clear terminal (avoid a current display bug)
-
 Set-PoshPrompt -Theme powerlevel10k_rainbow
 
 # Aliases
