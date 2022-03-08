@@ -26,5 +26,5 @@ My personal customization files for Windows and/or Linux environment.
 - Install a [Nerd Font](https://www.nerdfonts.com/font-downloads) like “Fira Code“ or “Caskaydia Cove“.
 - Go to Settings → “Windows Powershell” profile → “Appearance” tab → “Font face”, and choose your newly installed Nerd Font.
 - Replace (or adjust) the content of _Microsoft.PowerShell_profile.ps1_ file with the one of this repo.
-- To get rid of the copyright banner text on start, go to Settings → “Windows Powershell” profile, and add the -nologo argument to the executable command like so : `powershell.exe -nologo`.
+- To get rid of the copyright banner text on start, go to Settings → “Windows Powershell” profile, and add the -nologo argument to the executable command like so : `powershell.exe -nologo`. You can do the same for Powershell integrated to VSCode, check [settings.json](https://github.com/AlexandreCln/dotfiles/blob/main/VSCode/settings.json).
 - Restart your Windows Terminal and verify everything looks good. 
