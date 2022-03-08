@@ -1,16 +1,14 @@
 {
-    /*------------------*/
-    /*  Display Config  */
-    /*------------------*/
-    
-    "editor.fontFamily": "'Jetbrains Mono'",
-    "workbench.activityBar.visible": true,
+  "workbench.activityBar.visible": true,
+    "explorer.compactFolders": false,
   
-    /*--------------*/
-    /*  PHP Config  */
-    /*--------------*/
-  
-    "files.associations": { "*.module": "php" },
+    /*-------*/
+    /*  PHP  */
+    /*-------*/
+    "files.associations": { 
+        "*.module": "php",
+        "*.env": "properties"
+    },
     "php.suggest.basic": false,
     "intelephense.files.associations": [
       "*.php",
@@ -31,14 +29,10 @@
       "editor.formatOnSave": true,
       "editor.wordSeparators": "`~!@#%^&*()-=+[{]}\\|;:'\",.<>/?",
     },
-    "emmet.includeLanguages": {
-      "twig": "html"
-    },
   
-    /*--------------*/
-    /*  Vue Config  */
-    /*--------------*/
-  
+    /*----------*/
+    /*  Vue.js  */
+    /*----------*/
     "prettier.printWidth": 120,
     "prettier.tabWidth": 2,
     "prettier.singleQuote": true,
@@ -66,24 +60,33 @@
       "html",
       "javascript"
     ],
-  
-    /*-----------------*/
-    /*  Editor Config  */
-    /*-----------------*/
-  
     "editor.tabCompletion": "on", 
-    "editor.quickSuggestions": { "comments": true },
     "editor.codeActionsOnSave": {
       "source.fixAll": true
     },
+    "editor.quickSuggestions": {
+      "comments": false,
+      "strings": true,
+      "other": true
+    },
+    "html.hover.documentation": false,
+    "html.hover.references": false,
     "diffEditor.ignoreTrimWhitespace": false,
+
+    /*--------------*/
+    /*  Extensions  */
+    /*--------------*/
+    "liveServer.settings.port": 5500,
+    "liveServer.settings.CustomBrowser": "firefox",
   
-    /*----------------*/
-    /*  Other Config  */
-    /*----------------*/
-  
-    "terminal.integrated.fontSize": 13,
+    /*---------*/
+    /*  Other  */
+    /*---------*/
     "workbench.startupEditor": "newUntitledFile",
+    "emmet.includeLanguages": {
+      "twig": "html",
+      "javascript": "javascriptreact"
+    },
     "emmet.excludeLanguages": [
       "markdown"
     ],
@@ -100,7 +103,23 @@
       }
     },
     "update.mode": "manual",
-    "workbench.iconTheme": "ayu",
-    "workbench.colorTheme": "Nord",
-    "editor.fontSize": 13,
+    "html.suggest.html5": false,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+
+    /*------------*/
+    /*  Terminal  */
+    /*------------*/
+    "terminal.integrated.profiles.windows": {
+      "PowerShell": {
+          "source": "PowerShell",
+          "args": ["-noLogo"]
+      }
+    },
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "terminal.integrated.fontSize": 12,
+    "terminal.integrated.fontFamily": "Hasklug Nerd Font, Jetbrains Mono",
+    "terminal.integrated.lineHeight": 1,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "security.workspace.trust.untrustedFiles": "open",
+    "workbench.colorTheme": "Nord Deep",
   }
