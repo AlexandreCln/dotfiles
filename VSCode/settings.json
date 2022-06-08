@@ -1,189 +1,178 @@
 {
-	/********************/
-	/*   File Editing   */
-	/********************/
-	"editor.fontFamily": "JetBrains Mono, ConsolAs, 'Courier New', monospace",
-	"editor.fontLigatures": true,
-	"editor.fontSize": 14,
-	"editor.cursorSmoothCaretAnimation": true,
-	"editor.tabCompletion": "on",
-	"editor.acceptSuggestionOnEnter": "off",
-	"editor.acceptSuggestionOnCommitCharacter": false,
-	"editor.formatOnSave": true,
-	"files.autoSave": "afterDelay",
-	"files.autoSaveDelay": 1000,
-	"editor.codeActionsOnSave": {
-		"source.fixAll": true,
-		"source.fixAll.eslint": false
-	},
-	"editor.quickSuggestions": {
-		"comments": false,
-		"strings": true,
-		"other": true
-	},
-	"editor.lightbulb.enabled": false,
-	"editor.suggest.snippetsPreventQuickSuggestions": false,
-	"editor.defaultFormatter": "esbenp.prettier-vscode",
-	"editor.detectIndentation": true,
-	"editor.snippetSuggestions": "top",
-	"editor.wordBasedSuggestions": false,
-	"editor.suggest.localityBonus": true,
-	"editor.formatOnPaste": false,
-	"editor.smoothScrolling": true,
-	"[javascript][typescript][typescriptreact]": {
-		"editor.rulers": [80],
-		"editor.defaultFormatter": "esbenp.prettier-vscode",
-		"editor.suggestSelection": "recentlyUsed",
-		"editor.suggest.showKeywords": false,
-		"editor.tabSize": 2
-	},
-	"javascript.validate.enable": false,
-	"[php]": {
-		"editor.defaultFormatter": "bmewburn.vscode-intelephense-client",
-		"editor.formatOnSave": true,
-		"editor.wordSeparators": "`~!@#%^&*()-=+[{]}\\|;:'\",.<>/?"
-	},
-	"php.suggest.basic": false,
-	"[csharp]": {
-		"editor.formatOnSave": false
-	},
-	// "html.suggest.html5": false,
+  /********************/
+  /*   File Editing   */
+  /********************/
+  "editor.fontFamily": "JetBrains Mono, ConsolAs, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 14,
+  "editor.cursorSmoothCaretAnimation": true,
+  "editor.tabCompletion": "on",
+  "editor.acceptSuggestionOnEnter": "off",
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "editor.formatOnSave": true,
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true,
+    "source.fixAll.eslint": false
+  },
+  "editor.quickSuggestions": {
+    "comments": false,
+    "strings": true,
+    "other": true
+  },
+  "editor.lightbulb.enabled": false,
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.detectIndentation": true,
+  "editor.snippetSuggestions": "top",
+  "editor.wordBasedSuggestions": false,
+  "editor.suggest.localityBonus": true,
+  "editor.formatOnPaste": false,
+  "editor.smoothScrolling": true,
+  "[javascript][typescript][typescriptreact]": {
+    "editor.rulers": [80],
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.suggestSelection": "recentlyUsed",
+    "editor.suggest.showKeywords": false,
+    "editor.tabSize": 2
+  },
+  "javascript.validate.enable": false,
+  "[php]": {
+    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client",
+    "editor.formatOnSave": true,
+    "editor.wordSeparators": "`~!@#%^&*()-=+[{]}\\|;:'\",.<>/?"
+  },
+  "php.suggest.basic": false,
+  "[csharp]": {
+    "editor.formatOnSave": false
+  },
+  // "html.suggest.html5": false,
 
-	/***********/
-	/*   IDE   */
-	/***********/
-	"explorer.openEditors.visible": 0,
-	"explorer.compactFolders": false,
-	"explorer.confirmDragAndDrop": false,
-	"security.workspace.trust.untrustedFiles": "open",
-	"search.exclude": {
-		"**/node_modules": true,
-		"**/bower_components": true,
-		"**/coverage": true,
-		"**/dist": true,
-		"**/build": true,
-		"**/.build": true,
-		"**/.gh-pages": true
-	},
-	"files.defaultLanguage": "{activeEditorLanguage}",
-	"files.associations": {
-		"*.module": "php",
-		"*.env": "properties"
-	},
-	"window.zoomLevel": -1,
-	"workbench.startupEditor": "newUntitledFile",
-	"workbench.colorTheme": "Catppuccin",
-	"workbench.activityBar.visible": true,
-	"workbench.sideBar.location": "right",
-	"workbench.editor.limit.enabled": true,
-	"workbench.editor.limit.perEditorGroup": false,
-	"workbench.editor.limit.value": 18,
-	// "update.mode": "manual",
+  /***********/
+  /*   IDE   */
+  /***********/
+  "explorer.openEditors.visible": 0,
+  "explorer.compactFolders": false,
+  "explorer.confirmDragAndDrop": false,
+  "security.workspace.trust.untrustedFiles": "open",
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/coverage": true,
+    "**/dist": true,
+    "**/build": true,
+    "**/.build": true,
+    "**/.gh-pages": true
+  },
+  "files.defaultLanguage": "{activeEditorLanguage}",
+  "files.associations": {
+    "*.module": "php",
+    "*.env": "properties"
+  },
+  "window.zoomLevel": -1,
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.colorTheme": "Catppuccin",
+  "workbench.activityBar.visible": true,
+  "workbench.sideBar.location": "right",
+  "workbench.editor.limit.enabled": true,
+  "workbench.editor.limit.perEditorGroup": false,
+  "workbench.editor.limit.value": 18,
+  // "update.mode": "manual",
 
-	/******************/
-	/*   Extensions   */
-	/******************/
-	"eslint.validate": [
-		"javascript",
-		"javascriptreact",
-		"typescript",
-		"typescriptreact",
-		"vue",
-		"html"
-	],
-	"eslint.options": {
-		"env": {
-			"browser": true,
-			"jest/globals": true,
-			"es6": true
-		},
-		"parserOptions": {
-			"ecmaVersion": 2019,
-			"sourceType": "module",
-			"ecmaFeatures": {
-				"jsx": true
-			}
-		},
-		"rules": {
-			"no-debugger": "off"
-		}
-	},
-	"prettier.useTabs": true,
-	"prettier.tabWidth": 2,
-	"prettier.bracketSpacing": false,
-	"prettier.proseWrap": "always",
-	"prettier.semi": false,
-	"prettier.singleQuote": true,
-	"prettier.trailingComma": "all",
-	"prettier.arrowParens": "avoid",
-	"prettier.useEditorConfig": false,
-	// Turn off Vetur's linting feature, to use ESLint and Prettier
-	"vetur.validation.template": false,
-	"vetur.ignoreProjectWarning": true,
-	// Disable vetur snippets to avoid conflicts with Vue VSCode Snippets
-	"vetur.completion.scaffoldSnippetSources": {
-		"workspace": "",
-		"user": "",
-		"vetur": ""
-	},
-	"html.hover.documentation": false,
-	"html.hover.references": false,
-	"diffEditor.ignoreTrimWhitespace": false,
-	"liveServer.settings.port": 5500,
-	"liveServer.settings.CustomBrowser": "firefox",
-	"emmet.includeLanguages": {
-		"twig": "html",
-		"javascript": "javascriptreact"
-	},
-	"emmet.excludeLanguages": ["markdown"],
-	"intelephense.files.associations": ["*.php", "*.phtml"],
-	"intelephense.files.exclude": [
-		"**/.git/**",
-		"**/.svn/**",
-		"**/.hg/**",
-		"**/CVS/**",
-		"**/.DS_Store/**",
-		"**/node_modules/**",
-		"**/bower_components/**",
-		"**/vendor/**/{Test,test,Tests,tests}/**/*Test.php"
-	],
-	"vetur.format.defaultFormatterOptions": {
-		"js-beautify-html": {
-			"wrap_attributes": "force-expand-multiline"
-		},
-		"prettyhtml": {
-			"printWidth": 100,
-			"singleQuote": false,
-			"wrapAttributes": false,
-			"sortAttributes": false
-		}
-	},
-	"git.confirmSync": false,
-	"spellright.language": ["en"],
-	"spellright.documentTypes": ["markdown", "plaintext", "mdx", "md"],
-	"spellright.parserByClass": {
-		"mdx": {
-			"parser": "markdown"
-		}
-	},
-	"npm.packageManager": "npm",
+  /******************/
+  /*   Extensions   */
+  /******************/
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "vue",
+    "html"
+  ],
+  "eslint.options": {
+    "env": {
+      "browser": true,
+      "jest/globals": true,
+      "es6": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 2019,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "rules": {
+      "no-debugger": "off"
+    }
+  },
+  "html.hover.documentation": false,
+  "html.hover.references": false,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "emmet.includeLanguages": {
+    "twig": "html",
+    "javascript": "javascriptreact"
+  },
+  "emmet.excludeLanguages": ["markdown"],
+  "intelephense.files.associations": ["*.php", "*.phtml"],
+  "intelephense.files.exclude": [
+    "**/.git/**",
+    "**/.svn/**",
+    "**/.hg/**",
+    "**/CVS/**",
+    "**/.DS_Store/**",
+    "**/node_modules/**",
+    "**/bower_components/**",
+    "**/vendor/**/{Test,test,Tests,tests}/**/*Test.php"
+  ],
+  // Turn off Vetur's linting feature, to use ESLint and Prettier
+  "vetur.validation.template": false,
+  "vetur.ignoreProjectWarning": true,
+  // Disable vetur snippets to avoid conflicts with Vue VSCode Snippets
+  "vetur.completion.scaffoldSnippetSources": {
+    "workspace": "",
+    "user": "",
+    "vetur": ""
+  },
+  "vetur.format.defaultFormatterOptions": {
+    "js-beautify-html": {
+      "wrap_attributes": "force-expand-multiline"
+    },
+    "prettyhtml": {
+      "printWidth": 100,
+      "singleQuote": false,
+      "wrapAttributes": false,
+      "sortAttributes": false
+    }
+  },
+  "git.confirmSync": false,
+  "spellright.language": ["en"],
+  "spellright.documentTypes": ["markdown", "plaintext", "mdx", "md"],
+  "spellright.parserByClass": {
+    "mdx": {
+      "parser": "markdown"
+    }
+  },
+  "npm.packageManager": "npm",
 
-	/****************/
-	/*   Terminal   */
-	/****************/
-	"terminal.integrated.profiles.windows": {
-		"PowerShell": {
-			"source": "PowerShell",
-			"args": ["-noLogo"]
-		}
-	},
-	"terminal.integrated.defaultProfile.windows": "PowerShell",
-	"terminal.integrated.fontSize": 12,
-	"terminal.integrated.fontFamily": "Jetbrains Mono, Hasklug Nerd Font",
-	"terminal.integrated.lineHeight": 1,
-	"terminal.integrated.scrollback": 10000
+  /****************/
+  /*   Terminal   */
+  /****************/
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "args": ["-noLogo"]
+    }
+  },
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.fontSize": 12,
+  "terminal.integrated.fontFamily": "Jetbrains Mono, Hasklug Nerd Font",
+  "terminal.integrated.lineHeight": 1,
+  "terminal.integrated.scrollback": 10000
 
-	/***************************/
-	/*   Automatically added   */
-	/***************************/
+  /***************************/
+  /*   Automatically added   */
+  /***************************/
 }
