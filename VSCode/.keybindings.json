@@ -1,0 +1,25 @@
+// Place your key bindings in this file to override the defaults
+[
+	{
+		"key": "ctrl+alt+o",
+		"command": "list.collapseAll",
+		// Space will open the current tree item
+		// left/right arrows will open/close item
+		"when": "outline.active"
+	},
+	{
+		"key": "ctrl+alt+o",
+		"command": "outline.focus",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "alt+o",
+		"command": "workbench.action.quickOpen",
+		"args": "@:"
+	},
+	{
+		"key": "shift+ctrl+a",
+		"command": "explorer.newFolder",
+		"when": "filesExplorerFocus && !inputFocus"
+	}
+]
