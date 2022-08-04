@@ -1,0 +1,40 @@
+#!/bin/bash
+
+sudo apt update && apt upgrade -y
+
+echo "Installing Go (latest version) ..."
+GO_VERSION=$(curl https://go.dev/VERSION?m=text)
+TARGET_TAR="$GO_VERSION.linux-amd64.tar.gz"
+wget "https://go.dev/dl/$TARGET_TAR"
+sudo rm -rf /usr/local/go
+sudo tar -C /usr/local -xzf $TARGET_TAR
+rm $TARGET_TAR
+go version
+
+echo "Installing nodejs and npm ..."
+curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+sudo apt install nodejs -y
+
+echo "Installing neovim dependencies ..."
+sudo apt install xsel python3-pip pynvim ripgrep fd-find -y
+sudo npm i -g neovim
+
+echo "Installing utils packages ..."
+sudo npm -i tldr
+
+aptPackages=( "zsh" "tree" )
+
+for p in "${aptPackages[@]}"
+do
+  if ! [ -x "$(command -v $p)" ]; then
+    echo "Installing $p ..."
+    sudo apt install $p -y
+  else
+    echo "Package $p already installed ..."
+  fi
+done
+
+go install github.com/jesseduffield/lazygit@latest
+
+# Set zsh as default terminal
+chsh -s $(which zsh)
