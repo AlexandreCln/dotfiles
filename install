@@ -1,26 +1,35 @@
 #!/bin/bash
 
-sudo apt update && apt upgrade -y
+sudo apt update && sudo apt upgrade
 
-echo "Installing Go (latest version) ..."
-GO_VERSION=$(curl https://go.dev/VERSION?m=text)
-TARGET_TAR="$GO_VERSION.linux-amd64.tar.gz"
-wget "https://go.dev/dl/$TARGET_TAR"
-sudo rm -rf /usr/local/go
-sudo tar -C /usr/local -xzf $TARGET_TAR
-rm $TARGET_TAR
-go version
+# Go
+GO_LATEST_VERSION=$(curl -s https://go.dev/VERSION?m=text)
 
+if [[ ! -x "$(command -v go)" || $(go env GOVERSION) != $GO_LATEST_VERSION ]]
+then
+  echo "Installing latest version of Go ..."
+  GO_TARFILE="$GO_LATEST_VERSION.linux-amd64.tar.gz"
+  wget "https://go.dev/dl/$GO_TARFILE"
+  sudo rm -rf /usr/local/go
+  sudo tar -C /usr/local -xzf $GO_TARFILE
+  rm $GO_TARFILE*
+else
+  echo "Latest version of Go already installed."
+fi
+
+# Node & npm
+NODE_LTS=16
 echo "Installing nodejs and npm ..."
-curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_$NODE_LTS.x | sudo -E bash -
 sudo apt install nodejs -y
 
+# Neovim requierements
 echo "Installing neovim dependencies ..."
 sudo apt install xsel python3-pip pynvim ripgrep fd-find -y
 sudo npm i -g neovim
 
-echo "Installing utils packages ..."
-sudo npm -i tldr
+# Packages
+echo "Installing utilities packages ..."
 
 aptPackages=( "zsh" "tree" )
 
@@ -34,7 +43,13 @@ do
   fi
 done
 
+sudo npm -i tldr
+
 go install github.com/jesseduffield/lazygit@latest
 
 # Set zsh as default terminal
 chsh -s $(which zsh)
+
+# Copy config files
+cp .dotfiles/vim/.config/nvim ~/.config
+cp .dotfile/zsh ~/.config
