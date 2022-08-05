@@ -51,5 +51,5 @@ go install github.com/jesseduffield/lazygit@latest
 chsh -s $(which zsh)
 
 # Copy config files
-cp .dotfiles/vim/.config/nvim ~/.config
+cp .dotfiles/nvim ~/.config
 cp .dotfile/zsh ~/.config
