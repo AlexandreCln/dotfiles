@@ -87,8 +87,3 @@ export QT_QPA_PLATFORMTHEME=qt5ct
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-
-# start apache 
-if [ $(/etc/init.d/apache2 status | grep -v grep | grep 'apache2 is running' | wc -l) -eq 0 ]; then 
-    sudo service apache2 start
-fi
