@@ -38,7 +38,7 @@ sudo npm i -g neovim
 # Utilities Packages
 echo "Installing utilities packages ..."
 
-aptPackages=( "zsh" "tree" )
+aptPackages=( "zsh" "tree" "unzip")
 
 for p in "${aptPackages[@]}"
 do
