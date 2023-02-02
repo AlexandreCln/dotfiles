@@ -1,139 +1,195 @@
 {
-  /********************/
-  /*   File Editing   */
-  /********************/
-  "editor.fontFamily": "JetBrains Mono, Consolas",
-  "editor.fontLigatures": true,
-  "editor.fontSize": 15,
-  "editor.cursorSmoothCaretAnimation": true,
-  "editor.cursorBlinking": "phase",
-  "editor.tabCompletion": "on",
-  "editor.acceptSuggestionOnEnter": "off",
+  /**************/
+  /*   Editor   */
+  /**************/
+  "diffEditor.ignoreTrimWhitespace": false,
   "editor.acceptSuggestionOnCommitCharacter": false,
-  "editor.formatOnSave": true,
-  "files.autoSave": "afterDelay",
-  "files.autoSaveDelay": 1000,
+  "editor.acceptSuggestionOnEnter": "off",
   "editor.codeActionsOnSave": {
     "source.fixAll": true,
     "source.fixAll.eslint": false
   },
-  "editor.quickSuggestions": {
-    "comments": false,
-    "strings": true,
-    "other": true
-  },
-  "editor.lightbulb.enabled": false,
-  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorSmoothCaretAnimation": true,
+  "editor.cursorSurroundingLines": 9,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.detectIndentation": true,
-  "editor.snippetSuggestions": "top",
-  "editor.wordBasedSuggestions": false,
-  "editor.suggest.localityBonus": true,
+  "editor.fontFamily": "JetBrains Mono, Consolas",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 15,
   "editor.formatOnPaste": false,
+  "editor.formatOnSave": true,
+  "editor.lightbulb.enabled": false,
+  "editor.quickSuggestions": {
+    "comments": false,
+    "other": true,
+    "strings": true
+  },
   "editor.smoothScrolling": true,
+  "editor.snippetSuggestions": "top",
+  "editor.suggest.localityBonus": true,
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  "editor.tabCompletion": "on",
+  "editor.wordBasedSuggestions": false,
+
+  /*****************/
+  /*   Languages   */
+  /*****************/
+  "[csharp]": {
+    "editor.formatOnSave": false
+  },
+  "go.autocompleteUnimportedPackages": true,
+  "[go]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    },
+    "editor.fontFamily": "Go Mono",
+    "editor.formatOnSave": true
+  },
+  "go.formatFlags": ["goimports"],
+  "go.lintOnSave": "package",
+  "go.testFlags": ["-v"],
+  "go.testOnSave": true,
+  "go.toolsManagement.autoUpdate": true,
+  "html.hover.documentation": false,
+  "html.hover.references": false,
+  // "html.suggest.html5": false,
   "[javascript][typescript][typescriptreact]": {
-    "editor.rulers": [80],
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.suggestSelection": "recentlyUsed",
+    "editor.rulers": [80],
     "editor.suggest.showKeywords": false,
+    "editor.suggestSelection": "recentlyUsed",
     "editor.tabSize": 2
   },
   "javascript.validate.enable": false,
   "[php]": {
     "editor.defaultFormatter": "bmewburn.vscode-intelephense-client",
     "editor.formatOnSave": true,
-    "editor.wordSeparators": "`~!@#%^&*()-=+[{]}\\|;:'\",.<>/?", // double click selects the whole PHP $variable
+    "editor.wordSeparators": "`~!@#%^&*()-=+[{]}\\|;:'\",.<>/?" // double click selects the whole PHP $variable
   },
   "php.suggest.basic": false,
-  "[csharp]": {
-    "editor.formatOnSave": false
-  },
-  "[go]": {
-    "editor.fontFamily": "Go Mono",
-    "editor.formatOnSave": true,
-    "editor.codeActionsOnSave": {
-      "source.organizeImports": true
-    }
-  },
-  "go.testOnSave": true,
-  "go.lintOnSave": "package",
-  "go.formatFlags": ["goimports"],
-  "go.testFlags": ["-v"],
-  "go.autocompleteUnimportedPackages": true,
-  // "html.suggest.html5": false,
 
-  /*****************/
-  /*   Workbench   */
-  /*****************/
-  "explorer.openEditors.visible": 0,
+  /****************************************/
+  /*   Workbench & Miscellaneous config   */
+  /****************************************/
   "explorer.compactFolders": false,
   "explorer.confirmDragAndDrop": false,
-  "security.workspace.trust.untrustedFiles": "open",
-  "search.exclude": {
-    "**/node_modules": true,
-    "**/bower_components": true,
-    "**/coverage": true,
-    "**/dist": true,
-    "**/build": true,
-    "**/.build": true,
-    "**/.gh-pages": true
-  },
-  "files.defaultLanguage": "{activeEditorLanguage}",
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand ": true,
+  "explorer.fileNesting.patterns": { "*.tsx": "${capture}.tsx" },
+  "explorer.openEditors.visible": 0,
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
   "files.associations": {
     "*.module": "php",
     "*.inc": "php",
     "*.env": "properties"
   },
-  "workbench.startupEditor": "newUntitledFile",
-  "workbench.colorTheme": "7lou Theme",
+  "files.defaultLanguage": "{activeEditorLanguage}",
+  "security.workspace.trust.untrustedFiles": "open",
+  "search.exclude": {
+    "**/.build": true,
+    "**/.gh-pages": true,
+    "**/bower_components": true,
+    "**/build": true,
+    "**/coverage": true,
+    "**/dist": true,
+    "**/node_modules": true
+  },
+  "window.zoomLevel": -1,
   "workbench.activityBar.visible": true,
-  "workbench.sideBar.location": "right",
+  "workbench.colorTheme": "Dark+ Remix (One dark)",
   "workbench.editor.limit.enabled": true,
   "workbench.editor.limit.perEditorGroup": false,
   "workbench.editor.limit.value": 18,
-  "explorer.fileNesting.enabled": true,
-  "explorer.fileNesting.expand ": true,
-  "explorer.fileNesting.patterns": { "*.tsx": "${capture}.tsx" },
-  // "update.mode": "manual",
+  "workbench.sideBar.location": "right",
+  "workbench.startupEditor": "newUntitledFile",
 
   /******************/
   /*   Extensions   */
   /******************/
-  "html.hover.documentation": false,
-  "html.hover.references": false,
-  "diffEditor.ignoreTrimWhitespace": false,
-  "emmet.includeLanguages": {
-    "twig": "html",
-    "javascript": "javascriptreact"
-  },
   "emmet.excludeLanguages": ["markdown"],
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "twig": "html"
+  },
   "git.confirmSync": false,
-  "spellright.language": ["en"],
+  "git.path": "\\wsl.localhost\\Ubuntu-22.04\\usr\bin\\git",
+  "npm.packageManager": "npm",
   "spellright.documentTypes": ["markdown", "plaintext", "mdx", "md"],
+  "spellright.language": ["en"],
   "spellright.parserByClass": {
     "mdx": {
       "parser": "markdown"
     }
   },
-  "npm.packageManager": "npm",
 
   /****************/
   /*   Terminal   */
   /****************/
+  "terminal.integrated.defaultProfile.windows": "PowerShell, Ubuntu-22.04 (WSL)",
+  "terminal.integrated.fontFamily": "CaskaydiaCove Nerd Font, Jetbrains Mono, Consolas",
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.lineHeight": 0.7,
   "terminal.integrated.profiles.windows": {
+    "Command Prompt": {
+      "path": [
+        "${env:windir}\\Sysnative\\cmd.exe",
+        "${env:windir}\\System32\\cmd.exe"
+      ],
+      "args": [],
+      "icon": "terminal-cmd"
+    },
     "PowerShell": {
       "source": "PowerShell",
+      "icon": "terminal-powershell",
       "args": ["-noLogo"]
+    },
+    "Ubuntu-22.04 (WSL)": {
+      "path": "C:\\WINDOWS\\System32\\wsl.exe",
+      "args": ["-d", "Ubuntu-22.04"]
     }
   },
-  "terminal.integrated.defaultProfile.windows": "PowerShell",
-  "terminal.integrated.fontSize": 13,
-  "terminal.integrated.fontFamily": "CaskaydiaCove Nerd Font, Jetbrains Mono, Consolas",
-  "terminal.integrated.lineHeight": 0.7,
   "terminal.integrated.scrollback": 10000,
-  "window.zoomLevel": -1
 
-  /***************************/
-  /*   Automatically added   */
-  /***************************/
+  /***********/
+  /*   Vim   */
+  /***********/
+  "vim.cursorStylePerMode.insert": "underline",
+  "vim.cursorStylePerMode.normal": "line",
+  "vim.cursorStylePerMode.replace": "block-outline",
+  "vim.cursorStylePerMode.visual": "line",
+  "vim.cursorStylePerMode.visualblock": "line",
+  "vim.cursorStylePerMode.visualline": "line",
+  "vim.easymotion": true,
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false
+  },
+  "vim.hlsearch": true,
+  "vim.incsearch": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.leader": "<space>",
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "d"],
+      "after": ["d", "d"]
+    },
+    {
+      "before": ["<C-n>"],
+      "commands": [":nohl"]
+    },
+    {
+      "before": ["K"],
+      "commands": ["lineBreakInsert"],
+      "silent": true
+    }
+  ],
+  "vim.useCtrlKeys": true,
+  "vim.useSystemClipboard": true
 }
