@@ -10,8 +10,8 @@
     "source.fixAll.eslint": false
   },
   "editor.cursorBlinking": "smooth",
-  "editor.cursorSmoothCaretAnimation": true,
-  "editor.cursorSurroundingLines": 9,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorSurroundingLines": 12,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.detectIndentation": true,
   "editor.fontFamily": "JetBrains Mono, Consolas",
@@ -96,13 +96,11 @@
     "**/dist": true,
     "**/node_modules": true
   },
-  "window.zoomLevel": -1,
   "workbench.activityBar.visible": true,
-  "workbench.colorTheme": "Dark+ Remix (One dark)",
+  "workbench.colorTheme": "Palenight (Mild Contrast)",
   "workbench.editor.limit.enabled": true,
   "workbench.editor.limit.perEditorGroup": false,
   "workbench.editor.limit.value": 18,
-  "workbench.sideBar.location": "right",
   "workbench.startupEditor": "newUntitledFile",
 
   /******************/
@@ -191,5 +189,6 @@
     }
   ],
   "vim.useCtrlKeys": true,
-  "vim.useSystemClipboard": true
+  "vim.useSystemClipboard": true,
+  "window.zoomLevel": -1
 }
