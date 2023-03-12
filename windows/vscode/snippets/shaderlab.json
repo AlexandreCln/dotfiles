@@ -1,0 +1,561 @@
+{
+  // Tab stops    : $1, $2, $0 for the final cursor position.
+  // Placeholders : ${1:label}, ${2:another}. Placeholders with the same ids are connected.
+
+  // Library function
+  "Inverse Lerp function": {
+    "prefix": "fil",
+    "body": [
+      "float InverseLerp (float a, float b, float4 v)",
+      "{",
+      "    return (v-a)/(b-a);",
+      "}"
+    ]
+  },
+  "InverseLerp autocomplete": {
+    "prefix": "ilerp",
+    "body": "InverseLerp($1, $2, $3)$4;"
+  },
+  // Autocomplete CG standard functions
+  "abs autocomplete": {
+    "prefix": "abs",
+    "body": "abs($1)$2;"
+  },
+  "acos autocomplete": {
+    "prefix": "acos",
+    "body": "acos($1)$2;"
+  },
+  "all autocomplete": {
+    "prefix": "all",
+    "body": "all($1)$2;"
+  },
+  "any autocomplete": {
+    "prefix": "any",
+    "body": "any($1)$2;"
+  },
+  "asin autocomplete": {
+    "prefix": "asin",
+    "body": "asin($1)$2;"
+  },
+  "atan autocomplete": {
+    "prefix": "atan",
+    "body": "atan($1)$2;"
+  },
+  "atan2 autocomplete": {
+    "prefix": "atan2",
+    "body": "atan2($1)$2;"
+  },
+  "bitCount autocomplete": {
+    "prefix": "bitCount",
+    "body": "bitCount($1)$2;"
+  },
+  "bitfieldExtract autocomplete": {
+    "prefix": "bitfieldExtract",
+    "body": "bitfieldExtract($1)$2;"
+  },
+  "bitfieldInsert autocomplete": {
+    "prefix": "bitfieldInsert",
+    "body": "bitfieldInsert($1)$2;"
+  },
+  "bitfieldReverse autocomplete": {
+    "prefix": "bitfieldReverse",
+    "body": "bitfieldReverse($1)$2;"
+  },
+  "ceil autocomplete": {
+    "prefix": "ceil",
+    "body": "ceil($1)$2;"
+  },
+  "clamp autocomplete": {
+    "prefix": "clamp",
+    "body": "clamp($1)$2;"
+  },
+  "clip autocomplete": {
+    "prefix": "clip",
+    "body": "clip($1)$2;"
+  },
+  "cos autocomplete": {
+    "prefix": "cos",
+    "body": "cos($1)$2;"
+  },
+  "cosh autocomplete": {
+    "prefix": "cosh",
+    "body": "cosh($1)$2;"
+  },
+  "cross autocomplete": {
+    "prefix": "cross",
+    "body": "cross($1)$2;"
+  },
+  "ddx autocomplete": {
+    "prefix": "ddx",
+    "body": "ddx($1)$2;"
+  },
+  "ddy autocomplete": {
+    "prefix": "ddy",
+    "body": "ddy($1)$2;"
+  },
+  "degrees autocomplete": {
+    "prefix": "degrees",
+    "body": "degrees($1)$2;"
+  },
+  "determinant autocomplete": {
+    "prefix": "determinant",
+    "body": "determinant($1)$2;"
+  },
+  "distance autocomplete": {
+    "prefix": "distance",
+    "body": "distance($1)$2;"
+  },
+  "dot autocomplete": {
+    "prefix": "dot",
+    "body": "dot($1)$2;"
+  },
+  "exp autocomplete": {
+    "prefix": "exp",
+    "body": "exp($1)$2;"
+  },
+  "exp2 autocomplete": {
+    "prefix": "exp2",
+    "body": "exp2($1)$2;"
+  },
+  "faceforward autocomplete": {
+    "prefix": "faceforward",
+    "body": "faceforward($1)$2;"
+  },
+  "findLSB autocomplete": {
+    "prefix": "findLSB",
+    "body": "findLSB($1)$2;"
+  },
+  "findMSB autocomplete": {
+    "prefix": "findMSB",
+    "body": "findMSB($1)$2;"
+  },
+  "floatToIntBits autocomplete": {
+    "prefix": "floatToIntBits",
+    "body": "floatToIntBits($1)$2;"
+  },
+  "floatToRawIntBits autocomplete": {
+    "prefix": "floatToRawIntBits",
+    "body": "floatToRawIntBits($1)$2;"
+  },
+  "floor autocomplete": {
+    "prefix": "floor",
+    "body": "floor($1)$2;"
+  },
+  "fmod autocomplete": {
+    "prefix": "fmod",
+    "body": "fmod($1)$2;"
+  },
+  "frac autocomplete": {
+    "prefix": "frac",
+    "body": "frac($1)$2;"
+  },
+  "frexp autocomplete": {
+    "prefix": "frexp",
+    "body": "frexp($1)$2;"
+  },
+  "fwidth autocomplete": {
+    "prefix": "fwidth",
+    "body": "fwidth($1)$2;"
+  },
+  "intBitsToFloat autocomplete": {
+    "prefix": "intBitsToFloat",
+    "body": "intBitsToFloat($1)$2;"
+  },
+  "inverse autocomplete": {
+    "prefix": "inverse",
+    "body": "inverse($1)$2;"
+  },
+  "isfinite autocomplete": {
+    "prefix": "isfinite",
+    "body": "isfinite($1)$2;"
+  },
+  "isinf autocomplete": {
+    "prefix": "isinf",
+    "body": "isinf($1)$2;"
+  },
+  "isnan autocomplete": {
+    "prefix": "isnan",
+    "body": "isnan($1)$2;"
+  },
+  "ldexp autocomplete": {
+    "prefix": "ldexp",
+    "body": "ldexp($1)$2;"
+  },
+  "length autocomplete": {
+    "prefix": "length",
+    "body": "length($1)$2;"
+  },
+  "lerp autocomplete": {
+    "prefix": "lerp",
+    "body": "lerp($1)$2;"
+  },
+  "lit autocomplete": {
+    "prefix": "lit",
+    "body": "lit($1)$2;"
+  },
+  "log autocomplete": {
+    "prefix": "log",
+    "body": "log($1)$2;"
+  },
+  "log10 autocomplete": {
+    "prefix": "log10",
+    "body": "log10($1)$2;"
+  },
+  "log2 autocomplete": {
+    "prefix": "log2",
+    "body": "log2($1)$2;"
+  },
+  "max autocomplete": {
+    "prefix": "max",
+    "body": "max($1)$2;"
+  },
+  "min autocomplete": {
+    "prefix": "min",
+    "body": "min($1)$2;"
+  },
+  "modf autocomplete": {
+    "prefix": "modf",
+    "body": "modf($1)$2;"
+  },
+  "mul autocomplete": {
+    "prefix": "mul",
+    "body": "mul($1)$2;"
+  },
+  "normalize autocomplete": {
+    "prefix": "normalize",
+    "body": "normalize($1)$2;"
+  },
+  "pack autocomplete": {
+    "prefix": "pack",
+    "body": "pack($1)$2;"
+  },
+  "pow autocomplete": {
+    "prefix": "pow",
+    "body": "pow($1)$2;"
+  },
+  "radians autocomplete": {
+    "prefix": "radians",
+    "body": "radians($1)$2;"
+  },
+  "reflect autocomplete": {
+    "prefix": "reflect",
+    "body": "reflect($1)$2;"
+  },
+  "refract autocomplete": {
+    "prefix": "refract",
+    "body": "refract($1)$2;"
+  },
+  "round autocomplete": {
+    "prefix": "round",
+    "body": "round($1)$2;"
+  },
+  "rsqrt autocomplete": {
+    "prefix": "rsqrt",
+    "body": "rsqrt($1)$2;"
+  },
+  "saturate autocomplete": {
+    "prefix": "saturate",
+    "body": "saturate($1)$2;"
+  },
+  "sign autocomplete": {
+    "prefix": "sign",
+    "body": "sign($1)$2;"
+  },
+  "sin autocomplete": {
+    "prefix": "sin",
+    "body": "sin($1)$2;"
+  },
+  "sincos autocomplete": {
+    "prefix": "sincos",
+    "body": "sincos($1)$2;"
+  },
+  "sinh autocomplete": {
+    "prefix": "sinh",
+    "body": "sinh($1)$2;"
+  },
+  "smoothstep autocomplete": {
+    "prefix": "smoothstep",
+    "body": "smoothstep($1)$2;"
+  },
+  "sqrt autocomplete": {
+    "prefix": "sqrt",
+    "body": "sqrt($1)$2;"
+  },
+  "step autocomplete": {
+    "prefix": "step",
+    "body": "step($1)$2;"
+  },
+  "tan autocomplete": {
+    "prefix": "tan",
+    "body": "tan($1)$2;"
+  },
+  "tanh autocomplete": {
+    "prefix": "tanh",
+    "body": "tanh($1)$2;"
+  },
+  "tex1D autocomplete": {
+    "prefix": "tex1D",
+    "body": "tex1D($1)$2;"
+  },
+  "tex1DARRAY autocomplete": {
+    "prefix": "tex1DARRAY",
+    "body": "tex1DARRAY($1)$2;"
+  },
+  "tex1DARRAYbias autocomplete": {
+    "prefix": "tex1DARRAYbias",
+    "body": "tex1DARRAYbias($1)$2;"
+  },
+  "tex1DARRAYcmpbias autocomplete": {
+    "prefix": "tex1DARRAYcmpbias",
+    "body": "tex1DARRAYcmpbias($1)$2;"
+  },
+  "tex1DARRAYcmplod autocomplete": {
+    "prefix": "tex1DARRAYcmplod",
+    "body": "tex1DARRAYcmplod($1)$2;"
+  },
+  "tex1DARRAYfetch autocomplete": {
+    "prefix": "tex1DARRAYfetch",
+    "body": "tex1DARRAYfetch($1)$2;"
+  },
+  "tex1DARRAYlod autocomplete": {
+    "prefix": "tex1DARRAYlod",
+    "body": "tex1DARRAYlod($1)$2;"
+  },
+  "tex1DARRAYproj autocomplete": {
+    "prefix": "tex1DARRAYproj",
+    "body": "tex1DARRAYproj($1)$2;"
+  },
+  "tex1DARRAYsize autocomplete": {
+    "prefix": "tex1DARRAYsize",
+    "body": "tex1DARRAYsize($1)$2;"
+  },
+  "tex1Dbias autocomplete": {
+    "prefix": "tex1Dbias",
+    "body": "tex1Dbias($1)$2;"
+  },
+  "tex1Dcmpbias autocomplete": {
+    "prefix": "tex1Dcmpbias",
+    "body": "tex1Dcmpbias($1)$2;"
+  },
+  "tex1Dcmplod autocomplete": {
+    "prefix": "tex1Dcmplod",
+    "body": "tex1Dcmplod($1)$2;"
+  },
+  "tex1Dfetch autocomplete": {
+    "prefix": "tex1Dfetch",
+    "body": "tex1Dfetch($1)$2;"
+  },
+  "tex1Dlod autocomplete": {
+    "prefix": "tex1Dlod",
+    "body": "tex1Dlod($1)$2;"
+  },
+  "tex1Dproj autocomplete": {
+    "prefix": "tex1Dproj",
+    "body": "tex1Dproj($1)$2;"
+  },
+  "tex1Dsize autocomplete": {
+    "prefix": "tex1Dsize",
+    "body": "tex1Dsize($1)$2;"
+  },
+  "tex2D autocomplete": {
+    "prefix": "tex2D",
+    "body": "tex2D(_$1, ${2:i.uv})$3;"
+  },
+  "tex2Dbias autocomplete": {
+    "prefix": "tex2Dbias",
+    "body": "tex2Dbias($1)$2;"
+  },
+  "tex2Dcmpbias autocomplete": {
+    "prefix": "tex2Dcmpbias",
+    "body": "tex2Dcmpbias($1)$2;"
+  },
+  "tex2Dcmplod autocomplete": {
+    "prefix": "tex2Dcmplod",
+    "body": "tex2Dcmplod($1)$2;"
+  },
+  "tex2Dfetch autocomplete": {
+    "prefix": "tex2Dfetch",
+    "body": "tex2Dfetch($1)$2;"
+  },
+  "tex2Dlod autocomplete": {
+    "prefix": "tex2Dlod",
+    "body": "tex2Dlod($1)$2;"
+  },
+  "tex2Dproj autocomplete": {
+    "prefix": "tex2Dproj",
+    "body": "tex2Dproj($1)$2;"
+  },
+  "tex2Dsize autocomplete": {
+    "prefix": "tex2Dsize",
+    "body": "tex2Dsize($1)$2;"
+  },
+  "tex2DARRAY autocomplete": {
+    "prefix": "tex2DARRAY",
+    "body": "tex2DARRAY($1)$2;"
+  },
+  "tex2DARRAYbias autocomplete": {
+    "prefix": "tex2DARRAYbias",
+    "body": "tex2DARRAYbias($1)$2;"
+  },
+  "tex2DARRAYfetch autocomplete": {
+    "prefix": "tex2DARRAYfetch",
+    "body": "tex2DARRAYfetch($1)$2;"
+  },
+  "tex2DARRAYlod autocomplete": {
+    "prefix": "tex2DARRAYlod",
+    "body": "tex2DARRAYlod($1)$2;"
+  },
+  "tex2DARRAYproj autocomplete": {
+    "prefix": "tex2DARRAYproj",
+    "body": "tex2DARRAYproj($1)$2;"
+  },
+  "tex2DARRAYsize autocomplete": {
+    "prefix": "tex2DARRAYsize",
+    "body": "tex2DARRAYsize($1)$2;"
+  },
+  "tex2DMSfetch autocomplete": {
+    "prefix": "tex2DMSfetch",
+    "body": "tex2DMSfetch($1)$2;"
+  },
+  "tex2DMSsize autocomplete": {
+    "prefix": "tex2DMSsize",
+    "body": "tex2DMSsize($1)$2;"
+  },
+  "tex2DMSARRAYfetch autocomplete": {
+    "prefix": "tex2DMSARRAYfetch",
+    "body": "tex2DMSARRAYfetch($1)$2;"
+  },
+  "tex2DMSARRAYsize autocomplete": {
+    "prefix": "tex2DMSARRAYsize",
+    "body": "tex2DMSARRAYsize($1)$2;"
+  },
+  "tex3D autocomplete": {
+    "prefix": "tex3D",
+    "body": "tex3D($1)$2;"
+  },
+  "tex3Dbias autocomplete": {
+    "prefix": "tex3Dbias",
+    "body": "tex3Dbias($1)$2;"
+  },
+  "tex3Dfetch autocomplete": {
+    "prefix": "tex3Dfetch",
+    "body": "tex3Dfetch($1)$2;"
+  },
+  "tex3Dlod autocomplete": {
+    "prefix": "tex3Dlod",
+    "body": "tex3Dlod($1)$2;"
+  },
+  "tex3Dproj autocomplete": {
+    "prefix": "tex3Dproj",
+    "body": "tex3Dproj($1)$2;"
+  },
+  "tex3Dsize autocomplete": {
+    "prefix": "tex3Dsize",
+    "body": "tex3Dsize($1)$2;"
+  },
+  "texBUF autocomplete": {
+    "prefix": "texBUF",
+    "body": "texBUF($1)$2;"
+  },
+  "texBUFsize autocomplete": {
+    "prefix": "texBUFsize",
+    "body": "texBUFsize($1)$2;"
+  },
+  "texCUBE autocomplete": {
+    "prefix": "texCUBE",
+    "body": "texCUBE($1)$2;"
+  },
+  "texCUBEARRAY autocomplete": {
+    "prefix": "texCUBEARRAY",
+    "body": "texCUBEARRAY($1)$2;"
+  },
+  "texCUBEARRAYbias autocomplete": {
+    "prefix": "texCUBEARRAYbias",
+    "body": "texCUBEARRAYbias($1)$2;"
+  },
+  "texCUBEARRAYlod autocomplete": {
+    "prefix": "texCUBEARRAYlod",
+    "body": "texCUBEARRAYlod($1)$2;"
+  },
+  "texCUBEARRAYsize autocomplete": {
+    "prefix": "texCUBEARRAYsize",
+    "body": "texCUBEARRAYsize($1)$2;"
+  },
+  "texCUBEbias autocomplete": {
+    "prefix": "texCUBEbias",
+    "body": "texCUBEbias($1)$2;"
+  },
+  "texCUBElod autocomplete": {
+    "prefix": "texCUBElod",
+    "body": "texCUBElod($1)$2;"
+  },
+  "texCUBEproj autocomplete": {
+    "prefix": "texCUBEproj",
+    "body": "texCUBEproj($1)$2;"
+  },
+  "texCUBEsize autocomplete": {
+    "prefix": "texCUBEsize",
+    "body": "texCUBEsize($1)$2;"
+  },
+  "texRBUF autocomplete": {
+    "prefix": "texRBUF",
+    "body": "texRBUF($1)$2;"
+  },
+  "texRBUFsize autocomplete": {
+    "prefix": "texRBUFsize",
+    "body": "texRBUFsize($1)$2;"
+  },
+  "texRECT autocomplete": {
+    "prefix": "texRECT",
+    "body": "texRECT($1)$2;"
+  },
+  "texRECTbias autocomplete": {
+    "prefix": "texRECTbias",
+    "body": "texRECTbias($1)$2;"
+  },
+  "texRECTfetch autocomplete": {
+    "prefix": "texRECTfetch",
+    "body": "texRECTfetch($1)$2;"
+  },
+  "texRECTlod autocomplete": {
+    "prefix": "texRECTlod",
+    "body": "texRECTlod($1)$2;"
+  },
+  "texRECTproj autocomplete": {
+    "prefix": "texRECTproj",
+    "body": "texRECTproj($1)$2;"
+  },
+  "texRECTsize autocomplete": {
+    "prefix": "texRECTsize",
+    "body": "texRECTsize($1)$2;"
+  },
+  "transpose autocomplete": {
+    "prefix": "transpose",
+    "body": "transpose($1)$2;"
+  },
+  "trunc autocomplete": {
+    "prefix": "trunc",
+    "body": "trunc($1)$2;"
+  },
+  "unpack autocomplete": {
+    "prefix": "unpack",
+    "body": "unpack($1)$2;"
+  },
+  // Autocomplete types
+  "float autocomplete": {
+    "prefix": "float",
+    "body": "float($1)$2"
+  },
+  "float2 autocomplete": {
+    "prefix": "float2",
+    "body": "float2($1)$2"
+  },
+  "float3 autocomplete": {
+    "prefix": "float3",
+    "body": "float3($1)$2"
+  },
+  "float4 autocomplete": {
+    "prefix": "float4",
+    "body": "float4($1)$2"
+  }
+}
