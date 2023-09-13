@@ -3,6 +3,7 @@
   /*   Editor   */
   /**************/
   "diffEditor.ignoreTrimWhitespace": false,
+  "diffEditor.hideUnchangedRegions.enabled": true,
   "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.acceptSuggestionOnEnter": "off",
   "editor.codeActionsOnSave": {
@@ -25,6 +26,13 @@
     "other": true,
     "strings": true
   },
+  "editor.inlayHints.enabled": "on",
+  "typescript.inlayHints.parameterNames.enabled": "all",
+  "javascript.inlayHints.parameterNames.enabled": "all",
+  "editor.minimap.enabled": false,
+  "editor.mouseWheelScrollSensitivity": 3,
+  "editor.stickyScroll.enabled": true,
+  "editor.stickyScroll.maxLineCount": 8,
   "editor.smoothScrolling": true,
   "editor.snippetSuggestions": "top",
   "editor.suggest.localityBonus": true,
