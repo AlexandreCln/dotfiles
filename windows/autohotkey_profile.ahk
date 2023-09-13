@@ -1,4 +1,4 @@
-; To view Virtual Key Codes and Scan Codes, open the main window of a running .ahk file. 
+; To view Virtual Key Codes and Scan Codes, Open the main window of a running .ahk file. 
 ; Next, select “Key history and script info” from the top View menu. The left-most column displays 
 ; the Virtual Key Code for any pressed key while the second column displays the Scan Code—both in hexadecimal. 
 
@@ -27,6 +27,10 @@ DisableRAltDown()
     ; home & end
     o::home
     ^::end
+
+    ; page up & down
+    i::PgUp
+    $::PgDn
 
     SC003::Send ~{space} ; é
     "::#
