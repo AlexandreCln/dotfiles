@@ -15,9 +15,9 @@
   "editor.cursorSurroundingLines": 12,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.detectIndentation": true,
-  "editor.fontFamily": "JetBrains Mono, Consolas",
+  "editor.fontFamily": "Iosevka, JetBrains Mono",
   "editor.fontLigatures": true,
-  "editor.fontSize": 15,
+  "editor.fontSize": 16,
   "editor.formatOnPaste": false,
   "editor.formatOnSave": true,
   "editor.lightbulb.enabled": false,
@@ -105,7 +105,8 @@
     "**/node_modules": true
   },
   "workbench.activityBar.visible": true,
-  "workbench.colorTheme": "Palenight (Mild Contrast)",
+  "workbench.colorTheme": "Pastel Sky Light Theme",
+  // "workbench.colorTheme": "GitHub Light Colorblind (Beta)",
   "workbench.editor.limit.enabled": true,
   "workbench.editor.limit.perEditorGroup": false,
   "workbench.editor.limit.value": 18,
@@ -134,7 +135,7 @@
   /*   Terminal   */
   /****************/
   "terminal.integrated.defaultProfile.windows": "PowerShell, Ubuntu-22.04 (WSL)",
-  "terminal.integrated.fontFamily": "CaskaydiaCove Nerd Font, Jetbrains Mono, Consolas",
+  "terminal.integrated.fontFamily": "CaskaydiaCove Nerd Font, Jetbrains Mono",
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.lineHeight": 0.7,
   "terminal.integrated.profiles.windows": {
