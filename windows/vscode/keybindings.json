@@ -1,6 +1,6 @@
-// Place your key bindings in this file to override the defaults
+// Place your key bindings in this file to override the defaultsauto[]
 [
-	{
+    {
 		"key": "ctrl+alt+o",
 		"command": "list.collapseAll",
 		// Space will open the current tree item
@@ -21,5 +21,75 @@
 		"key": "shift+ctrl+a",
 		"command": "explorer.newFolder",
 		"when": "filesExplorerFocus && !inputFocus"
-	}
+	},
+    {
+        "key": "alt+c",
+        "command": "editor.action.commentLine",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+oem_2",
+        "command": "-editor.action.commentLine",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "alt+f",
+        "command": "editor.action.quickFix",
+        "when": "editorHasCodeActionsProvider && textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+oem_period",
+        "command": "-editor.action.quickFix",
+        "when": "editorHasCodeActionsProvider && textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "alt+f",
+        "command": "workbench.action.terminal.showQuickFixes",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+oem_period",
+        "command": "-workbench.action.terminal.showQuickFixes",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "alt+f",
+        "command": "acceptSelectedCodeAction",
+        "when": "codeActionMenuVisible"
+    },
+    {
+        "key": "ctrl+oem_period",
+        "command": "-acceptSelectedCodeAction",
+        "when": "codeActionMenuVisible"
+    },
+    {
+        "key": "alt+f",
+        "command": "editor.changeDropType",
+        "when": "dropWidgetVisible"
+    },
+    {
+        "key": "ctrl+oem_period",
+        "command": "-editor.changeDropType",
+        "when": "dropWidgetVisible"
+    },
+    {
+        "key": "alt+f",
+        "command": "editor.changePasteType",
+        "when": "pasteWidgetVisible"
+    },
+    {
+        "key": "ctrl+oem_period",
+        "command": "-editor.changePasteType",
+        "when": "pasteWidgetVisible"
+    },
+    {
+        "key": "alt+f",
+        "command": "problems.action.showQuickFixes",
+        "when": "problemFocus"
+    },
+    {
+        "key": "ctrl+oem_period",
+        "command": "-problems.action.showQuickFixes",
+        "when": "problemFocus"
+    }
 ]
