@@ -43,4 +43,5 @@ DisableRAltDown()
     SC00B::@ ; à
     )::]
     =::}
+    e::€
 #If
