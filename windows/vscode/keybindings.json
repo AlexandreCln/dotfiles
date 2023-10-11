@@ -91,5 +91,13 @@
         "key": "ctrl+oem_period",
         "command": "-problems.action.showQuickFixes",
         "when": "problemFocus"
+    },
+    {
+        "key": "alt+t",
+        "command": "workbench.action.togglePanel"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "-workbench.action.togglePanel"
     }
 ]
