@@ -6,7 +6,7 @@ My personal customization files for WSL2 and/or Linux environment.
 1. Install packages and dependencies, and copy config files :
 ```
 git clone https://github.com/AlexandreCln/dotfiles.git
-.dotfiles/install
+.dotfiles/linux/install
 ```
 
 2. Setup Neovim

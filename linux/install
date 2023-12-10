@@ -3,8 +3,10 @@ sudo apt update -y && sudo apt upgrade -y
 
 # Copy config files
 mkdir -p .config
-cp -r .dotfiles/nvim ~/.config/
-cp -r .dotfiles/zsh ~/.config/
+cp -r .dotfiles/linux/nvim ~/.config/
+cp -r .dotfiles/linux/zsh ~/.config/
+cp -r .dotfiles/linux/.gitconfig ~
+echo "Config files copied."
 
 # Go
 GO_LATEST_VERSION=$(curl -s https://go.dev/VERSION?m=text)
@@ -20,6 +22,7 @@ then
   fi
   sudo tar -C /usr/local -xzf $GO_TARFILE
   rm $GO_TARFILE*
+  echo "Go installed."
 else
   echo "Latest version of Go already installed."
 fi
@@ -29,17 +32,17 @@ NODE_LTS=16
 echo "Installing nodejs and npm ..."
 curl -sL https://deb.nodesource.com/setup_$NODE_LTS.x | sudo -E bash -
 sudo apt install nodejs -y
+echo "Node and Npm installed."
 
 # Neovim requierements
 echo "Installing neovim dependencies ..."
 sudo apt install xsel ripgrep fd-find -y
 sudo npm i -g neovim
+echo "Neovim installed."
 
 # Utilities Packages
 echo "Installing utilities packages ..."
-
 aptPackages=( "zsh" "tree" "unzip")
-
 for p in "${aptPackages[@]}"
 do
   if ! [ -x "$(command -v $p)" ]; then
@@ -50,10 +53,11 @@ do
   fi
 done
 
+echo "Installing tldr ..."
 sudo npm install -g tldr
 
+echo "Installing lazygit ..."
 /usr/local/go/bin/go install github.com/jesseduffield/lazygit@latest
 
 # Set zsh as default terminal
-sudo chsh -s $(which zsh)
-
+sudo chsh -s $(which zsh
