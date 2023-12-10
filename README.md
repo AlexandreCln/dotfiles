@@ -1,7 +1,7 @@
 # dotfiles
 My personal customization files for WSL2 and/or Linux environment.
 
-### Installation
+### Linux Installation
 
 1. Install packages and dependencies, and copy config files :
 ```
