@@ -1,0 +1,42 @@
+{
+	// Configured to supplement `Unity Code Snippets` extention
+	"Summary block": {
+		"prefix": "sum",
+		"body": [
+			"/// <summary>",
+			"/// $1",
+			"/// </summary>",
+		]
+	},
+	"Public function": {
+		"prefix": "fpub",
+		"body": [
+			"public ${1:void} ${2:Name}($3)",
+			"{",
+			"\t$4;",
+			"}",
+		]
+	},
+	"Private function": {
+		"prefix": "fpri",
+		"body": [
+			"${1:void} ${2:Name}($3)",
+			"{",
+			"\t$4;",
+			"}",
+		]
+	},
+	"If/Else statement": {
+		"prefix": "ife",
+		"body": [
+			"if ($1)",
+			"{",
+			"\t$2;",
+			"}",
+			"else",
+			"{",
+			"\t$3;",
+			"}",
+		]
+	},
+}

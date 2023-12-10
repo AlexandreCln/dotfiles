@@ -1,0 +1,152 @@
+{
+  // same snippets for javascript.json, typescript.json and typescriptreact.json
+  "if statement": {
+    "prefix": "if",
+    "body": ["if ($0) {", "  ", "}"]
+  },
+  "console.log": {
+    "prefix": "cl",
+    "body": "console.log(${0:'here'})"
+  },
+  "console.log('var', var)": {
+    "prefix": "vl",
+    "body": "console.log('$0', $0)"
+  },
+  "console.log({var})": {
+    "prefix": "ol",
+    "body": "console.log({$0})"
+  },
+  "spaced console.log": {
+    "prefix": "scl",
+    "body": [
+      "console.log('**************************************************************************\\\\n\\\\n\\\\n')",
+      "console.log($0)",
+      "console.log('\\\\n\\\\n\\\\n**************************************************************************')"
+    ]
+  },
+  "eslint rule": {
+    "prefix": "esl",
+    "body": ["/*", "eslint", "  $0: \"off\",", "*/"]
+  },
+  "eslint disable next line": {
+    "prefix": "eslnl",
+    "body": "// eslint-disable-next-line $0"
+  },
+  "eslint disable line": {
+    "prefix": "esll",
+    "body": "// eslint-disable-line $0"
+  },
+  "constructor": {
+    "prefix": "ctor",
+    "body": ["constructor(...args) {", "  super(...args)", "  $0", "}"]
+  },
+  "try/catch": {
+    "prefix": "try",
+    "body": ["try {", "  $0", "} catch (error) {", "  ", "}"]
+  },
+  "async function": {
+    "prefix": "afun",
+    "body": ["async function $1($0) {", "  ", "}"]
+  },
+  "throw log": {
+    "prefix": "tl",
+    "body": "throw new Error(JSON.stringify({$0}, null, 2))"
+  },
+  "Switch Statement": {
+    "prefix": "switch",
+    "body": [
+      "switch (${0:key}) {",
+      "  case 'value': {",
+      "    ",
+      "    break",
+      "  }",
+      "  default: {",
+      "    break",
+      "  }",
+      "}"
+    ]
+  },
+  "Switch case": {
+    "prefix": "case",
+    "body": ["case ${2:'value'}: {", "  return $0", "}"]
+  },
+  "import x from '": {
+    "prefix": "imp",
+    "body": "import ${0:*} from '$1'"
+  },
+  "import React": {
+    "prefix": "ir",
+    "body": ["import * as React from 'react'\n"]
+  },
+  "Reducer": {
+    "prefix": "reducer",
+    "body": [
+      "function ${1:someReducer}(state, action) {",
+      "  switch (action.type) {",
+      "    case ${0:'value'}: {",
+      "      return",
+      "    }",
+      "    default: {",
+      "      throw new Error(`Unhandled action type: ${action.type}`)",
+      "    }",
+      "  }",
+      "}"
+    ]
+  },
+  "React.useState": {
+    "prefix": "us",
+    "body": [
+      "const [${1}, set${1/(^[a-zA-Z])(.*)/${1:/upcase}${2}/}] = useState(${2:initial${1/(^[a-zA-Z])(.*)/${1:/upcase}${2}/}})$0"
+    ]
+  },
+  "React.useEffect": {
+    "prefix": "uf",
+    "body": ["React.useEffect(() => {", "  $0", "}, [])"]
+  },
+  "React.useReducer": {
+    "prefix": "ur",
+    "body": [
+      "const [state, dispatch] = React.useReducer(${0:someReducer}, {",
+      "  ",
+      "})"
+    ]
+  },
+  "React.useRef": {
+    "prefix": "urf",
+    "body": ["const ${1:someRef} = React.useRef($0)"]
+  },
+  "React Component": {
+    "prefix": "rc",
+    "body": [
+      "class $1 extends React.Component {",
+      "  render() {",
+      "    $0",
+      "  }",
+      "}"
+    ]
+  },
+  "React: componentWillMount": {
+    "prefix": "cwm",
+    "body": ["componentWillMount() {", "  $0", "}"]
+  },
+  "React: componentDidMount": {
+    "prefix": "cdm",
+    "body": ["componentDidMount() {", "  $0", "}"]
+  },
+  "React: componentWillReceiveProps": {
+    "prefix": "cwrp",
+    "body": ["componentWillReceiveProps(nextProps) {", "  $0", "}"]
+  },
+  "React: componentWillUpdate": {
+    "prefix": "cwu",
+    "body": ["componentWillUpdate(nextProps, nextState) {", "  $0", "}"]
+  },
+  "React: componentDidUpdate": {
+    "prefix": "cdu",
+    "body": ["componentDidUpdate(prevProps, prevState) {", "  $0", "}"]
+  },
+  "React: componentWillUnmount": {
+    "prefix": "cwu",
+    "body": ["componentWillUnmount() {", "  $0", "}"]
+  }
+}
