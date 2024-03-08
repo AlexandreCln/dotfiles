@@ -8,6 +8,17 @@
 		],
 		"description": "Native PHP debug function."
 	},
+	"Var Dump Pretty": {
+		"prefix": [
+			"vdp"
+		],
+		"body": [
+			"echo '<pre>';",
+			"var_dump($1);",
+			"echo '</pre>';"
+		],
+		"description": "Native PHP debug function then stop PHP script."
+	},
 	"Var Dump / Die": {
 		"prefix": [
 			"vdd"
