@@ -7,20 +7,20 @@
   "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.acceptSuggestionOnEnter": "off",
   "editor.codeActionsOnSave": {
-    "source.fixAll": true,
-    "source.fixAll.eslint": false
+    "source.fixAll": "explicit",
+    "source.fixAll.eslint": "never"
   },
   "editor.cursorBlinking": "smooth",
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.cursorSurroundingLines": 12,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.detectIndentation": true,
-  "editor.fontFamily": "Iosevka, JetBrains Mono",
+  "editor.fontFamily": "Iosevka",
   "editor.fontLigatures": true,
-  "editor.fontSize": 16,
+  "editor.fontSize": 17,
   "editor.formatOnPaste": false,
   "editor.formatOnSave": true,
-  "editor.lightbulb.enabled": false,
+  "editor.lightbulb.enabled": "off",
   "editor.quickSuggestions": {
     "comments": false,
     "other": true,
@@ -38,30 +38,44 @@
   "editor.suggest.localityBonus": true,
   "editor.suggest.snippetsPreventQuickSuggestions": false,
   "editor.tabCompletion": "on",
-  "editor.wordBasedSuggestions": false,
+  "editor.wordBasedSuggestions": "off",
 
+  /***************/
+  /*   Explorer  */
+  /***************/
+  "explorer.compactFolders": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand ": true,
+  "explorer.fileNesting.patterns": { "*.tsx": "${capture}.tsx" },
+  "explorer.openEditors.visible": 1,
+  
   /*****************/
   /*   Languages   */
   /*****************/
-  "[csharp]": {
-    "editor.formatOnSave": false
-  },
   "go.autocompleteUnimportedPackages": true,
-  "[go]": {
-    "editor.codeActionsOnSave": {
-      "source.organizeImports": true
-    },
-    "editor.fontFamily": "Go Mono",
-    "editor.formatOnSave": true
-  },
   "go.formatFlags": ["goimports"],
   "go.lintOnSave": "package",
   "go.testFlags": ["-v"],
   "go.testOnSave": true,
   "go.toolsManagement.autoUpdate": true,
+  "[go]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    },
+    "editor.fontFamily": "Go Mono",
+    "editor.formatOnSave": true
+  },
+
+  "[csharp]": {
+    "editor.formatOnSave": false
+  },
+
   "html.hover.documentation": false,
   "html.hover.references": false,
   // "html.suggest.html5": false,
+
+  "javascript.validate.enable": false,
   "[javascript][typescript][typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.rulers": [80],
@@ -69,74 +83,20 @@
     "editor.suggestSelection": "recentlyUsed",
     "editor.tabSize": 2
   },
-  "javascript.validate.enable": false,
+
+  "php.suggest.basic": false,
   "[php]": {
     "editor.defaultFormatter": "bmewburn.vscode-intelephense-client",
     "editor.formatOnSave": true,
     "editor.wordSeparators": "`~!@#%^&*()-=+[{]}\\|;:'\",.<>/?" // double click selects the whole PHP $variable
   },
-  "php.suggest.basic": false,
 
-  /****************************************/
-  /*   Workbench & Miscellaneous config   */
-  /****************************************/
-  "explorer.compactFolders": false,
-  "explorer.confirmDragAndDrop": false,
-  "explorer.fileNesting.enabled": true,
-  "explorer.fileNesting.expand ": true,
-  "explorer.fileNesting.patterns": { "*.tsx": "${capture}.tsx" },
-  "explorer.openEditors.visible": 0,
-  "files.autoSave": "afterDelay",
-  "files.autoSaveDelay": 1000,
-  "files.associations": {
-    "*.module": "php",
-    "*.inc": "php",
-    "*.env": "properties"
-  },
-  "files.defaultLanguage": "{activeEditorLanguage}",
-  "security.workspace.trust.untrustedFiles": "open",
-  "search.exclude": {
-    "**/.build": true,
-    "**/.gh-pages": true,
-    "**/bower_components": true,
-    "**/build": true,
-    "**/coverage": true,
-    "**/dist": true,
-    "**/node_modules": true
-  },
-  "workbench.activityBar.visible": true,
-  "workbench.colorTheme": "Pastel Sky Light Theme",
-  // "workbench.colorTheme": "GitHub Light Colorblind (Beta)",
-  "workbench.editor.limit.enabled": true,
-  "workbench.editor.limit.perEditorGroup": false,
-  "workbench.editor.limit.value": 18,
-  "workbench.startupEditor": "newUntitledFile",
-
-  /******************/
-  /*   Extensions   */
-  /******************/
-  "emmet.excludeLanguages": ["markdown"],
-  "emmet.includeLanguages": {
-    "javascript": "javascriptreact",
-    "twig": "html"
-  },
-  "git.confirmSync": false,
-  "git.path": "\\wsl.localhost\\Ubuntu-22.04\\usr\bin\\git",
-  "npm.packageManager": "npm",
-  "spellright.documentTypes": ["markdown", "plaintext", "mdx", "md"],
-  "spellright.language": ["en"],
-  "spellright.parserByClass": {
-    "mdx": {
-      "parser": "markdown"
-    }
-  },
-
-  /****************/
+    /****************/
   /*   Terminal   */
   /****************/
-  "terminal.integrated.defaultProfile.windows": "PowerShell, Ubuntu-22.04 (WSL)",
-  "terminal.integrated.fontFamily": "CaskaydiaCove Nerd Font, Jetbrains Mono",
-  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.fontFamily": "Iosevka",
+  "terminal.integrated.fontSize": 15,
   "terminal.integrated.lineHeight": 0.7,
   "terminal.integrated.profiles.windows": {
     "Command Prompt": {
@@ -160,44 +120,80 @@
   "terminal.integrated.scrollback": 10000,
 
   /***********/
-  /*   Vim   */
+  /*   Misc  */
   /***********/
-  "vim.cursorStylePerMode.insert": "underline",
-  "vim.cursorStylePerMode.normal": "line",
-  "vim.cursorStylePerMode.replace": "block-outline",
-  "vim.cursorStylePerMode.visual": "line",
-  "vim.cursorStylePerMode.visualblock": "line",
-  "vim.cursorStylePerMode.visualline": "line",
-  "vim.easymotion": true,
-  "vim.handleKeys": {
-    "<C-a>": false,
-    "<C-f>": false
+  "window.zoomLevel": -1,
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+  "files.associations": {
+    "*.module": "php",
+    "*.inc": "php",
+    "*.env": "properties"
   },
-  "vim.hlsearch": true,
-  "vim.incsearch": true,
-  "vim.insertModeKeyBindings": [
+  "files.defaultLanguage": "{activeEditorLanguage}",
+  "security.workspace.trust.untrustedFiles": "open",
+  "search.exclude": {
+    "**/.build": true,
+    "**/.gh-pages": true,
+    "**/bower_components": true,
+    "**/build": true,
+    "**/coverage": true,
+    "**/dist": true,
+    "**/node_modules": true
+  },
+  "workbench.colorTheme": "GitHub Light Colorblind (Beta)",
+  "workbench.editor.limit.enabled": true,
+  "workbench.editor.limit.perEditorGroup": false,
+  "workbench.editor.limit.value": 18,
+  "workbench.startupEditor": "newUntitledFile",
+
+  /******************/
+  /*   Extensions   */
+  /******************/
+  "emmet.excludeLanguages": ["markdown"],
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "twig": "html"
+  },
+
+  "git.confirmSync": false,
+  "git.path": "\\wsl.localhost\\Ubuntu-22.04\\usr\bin\\git",
+
+  "npm.packageManager": "npm",
+
+  "spellright.documentTypes": ["markdown", "plaintext", "mdx", "md"],
+  "spellright.language": ["en"],
+  "spellright.parserByClass": {
+    "mdx": {
+      "parser": "markdown"
+    }
+  },
+
+  /*************/
+  /*   Latex   */
+  /*************/
+  "[latex]": {
+    "editor.rulers": [80]
+  },
+  "latex-workshop.latex.tools": [
     {
-      "before": ["j", "j"],
-      "after": ["<Esc>"]
+      "name": "lualatex",
+      "command": "lualatex",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "%DOC%"
+      ]
     }
   ],
-  "vim.leader": "<space>",
-  "vim.normalModeKeyBindingsNonRecursive": [
+  "latex-workshop.latex.recipes": [
     {
-      "before": ["<leader>", "d"],
-      "after": ["d", "d"]
-    },
-    {
-      "before": ["<C-n>"],
-      "commands": [":nohl"]
-    },
-    {
-      "before": ["K"],
-      "commands": ["lineBreakInsert"],
-      "silent": true
+      "name": "lualatex",
+      "tools": ["lualatex"]
     }
   ],
-  "vim.useCtrlKeys": true,
-  "vim.useSystemClipboard": true,
-  "window.zoomLevel": -1
-}
+
+  /*************************/
+  /*   Computer Specific   */
+  /*************************/
