@@ -4,6 +4,7 @@
   /**************/
   "diffEditor.ignoreTrimWhitespace": false,
   "diffEditor.hideUnchangedRegions.enabled": true,
+  "editor.accessibilitySupport": "off",
   "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.acceptSuggestionOnEnter": "off",
   "editor.codeActionsOnSave": {
