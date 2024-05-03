@@ -56,7 +56,7 @@
             "function d(...$$variables) {",
             "    foreach ($$variables as $$variable) {",
             "        $$type = gettype($$variable);",
-            "        echo \"[ <b>Type:</b> $$type ] <br>\";",
+            "        echo \"<b>[ $$type ]</b> <br>\";",
             "        if ($$variable === null) {",
             "            echo \"<b>Value:</b> <i>NULL</i> <br>\";",
             "        } elseif ($$variable === '') {",
