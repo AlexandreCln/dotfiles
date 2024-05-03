@@ -1,3 +1,4 @@
+
 {
 	"Var Dump": {
 		"prefix": [
@@ -48,6 +49,39 @@
 			"ini_set('xdebug.var_display_max_data', 2048);"
 		],
 		"description": "XDebug runtime config."
+	},
+	"Custom var_dump": {
+		"prefix": "custom_vd",
+		"body": [
+            "function d(...$$variables) {",
+            "    foreach ($$variables as $$variable) {",
+            "        $$type = gettype($$variable);",
+            "        echo \"[ <b>Type:</b> $$type ] <br>\";",
+            "        if ($$variable === null) {",
+            "            echo \"<b>Value:</b> <i>NULL</i> <br>\";",
+            "        } elseif ($$variable === '') {",
+            "            echo \"<b>Value:</b> <i>&lt;empty string&gt;</i> <br>\";",
+            "        } elseif (is_array($$variable) || is_object($$variable)) {",
+            "            foreach ($$variable as $$key => $$value) {",
+            "                if (is_array($$value) || is_object($$value)) {",
+            "                    echo \"<b>$$key</b>: <br>\";",
+            "                    d($$value);",
+            "                } elseif ($$value === null) {",
+            "                    echo \"<b>$$key</b>: <i>NULL</i> <br>\";",
+            "                } elseif ($$value === '') {",
+            "                    echo \"<b>$$key</b>: <i>&lt;empty string&gt;</i> <br>\";",
+            "                } else {",
+            "                    echo \"<b>$$key</b>: $$value <br>\";",
+            "                }",
+            "            }",
+            "        } else {",
+            "            echo \"<b>Value:</b> $$variable <br>\";",
+            "        }",
+            "        echo \"<br>\";",
+            "    }",
+            "}"
+        ],
+		"description": "Custom var_dump function to display key-value pairs with type information."
 	},
 	"Todo": {
 		"prefix": [
