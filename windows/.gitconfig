@@ -1,55 +1,51 @@
 [user]
-  name = Alexandre Coulon
-  email = 55137382+AlexandreCln@users.noreply.github.com
+	email = 55137382+AlexandreCln@users.noreply.github.com
+	name = Alexandre COULON
 
 [alias]
-  co = checkout
-  st = status
-  rh = reset HEAD
-  rhh = reset --hard HEAD
+    co = checkout
+    st = status
+    rh = reset HEAD
+    rhh = reset --hard
 
-  l = "!. ~/.githelpers && pretty_git_log"
-  la = "!git l --all"
-  lr = "!git l -30"
-  lra = "!git lr --all"
-  lg = "!git l -G $1 -- $2"
-  feature = !sh -c 'git checkout --no-track -b $0 origin/main'
+    l = "!f() { if [ -e ~/.githelpers ]; then sh ~/.githelpers; else git log --pretty=format:'%C(auto)%h %ad | %s%d [%an]' --graph --date=short; fi }; f"
+    la = "!git l --all"
+    lr = "!git l -30"
+    lra = "!git lr --all"
+    lg = "!f() { if [ -e ~/.githelpers ]; then sh ~/.githelpers; else git log --pretty=format:'%C(auto)%h %ad | %s%d [%an]' --graph --date=short --grep=\"$1\"; fi }; f"
+    feature = !sh -c 'git checkout --no-track -b $0 origin/main'
 
-  ruf = "!. ~/.githelpers && remove_untracked_files"
+    ruf = "!f() { if [ -e ~/.githelpers ]; then sh ~/.githelpers; else git clean -df; fi }; f"
 
-	tree = log --oneline --decorate --graph
+    tree = log --oneline --decorate --graph
 
-  # Taken from here: https://aaronbonner.io/post/80766268890/git-alias-to-simplify-setting-upstream-branch
-  sup = "!git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`"
+    sup = "!git branch --set-upstream-to=origin/$(git symbolic-ref --short HEAD)"
 
 [core]
-  excludesfile = ~/.gitignore
+    excludesfile = ~/.gitignore
 
 [color]
-  diff = auto
-  status = auto
-  branch = auto
-	ui = true
+    diff = auto
+    status = auto
+    branch = auto
+    ui = true
 
 [push]
-	default = current
-	followTags = true
+    default = current
+    followTags = true
 
 [remote]
-  pushDefault = origin
+    pushDefault = origin
 
 ; [branch]
-; 	autosetuprebase = always
+;    autosetuprebase = always
 
 [diff "gpg"]
-	binary = true
-	textconv = gpg -d --quiet --yes --compress-algo=none --no-encrypt-to --batch --use-agent
+    binary = true
+    textconv = gpg -d --quiet --yes --compress-algo=none --no-encrypt-to --batch --use-agent
 
 [commit]
-	verbose = true
+    verbose = true
 
 [init]
-	defaultBranch = main
-
-; [pull]
-; 	rebase = true
+    defaultBranch = main
