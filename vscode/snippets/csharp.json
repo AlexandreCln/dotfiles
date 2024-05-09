@@ -39,4 +39,8 @@
 			"}",
 		]
 	},
+	"Unity Log": {
+		"prefix": "log",
+		"body": "Debug.Log($1);"
+	},
 }
