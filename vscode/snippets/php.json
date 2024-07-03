@@ -1,18 +1,14 @@
 
 {
 	"Var Dump": {
-		"prefix": [
-			"vd"
-		],
+		"prefix": "vd",
 		"body": [
 			"var_dump($1);"
 		],
 		"description": "Native PHP debug function."
 	},
 	"Var Dump Pretty": {
-		"prefix": [
-			"vdp"
-		],
+		"prefix": "vdp",
 		"body": [
 			"echo '<pre>';",
 			"var_dump($1);",
@@ -21,9 +17,7 @@
 		"description": "Native PHP debug function then stop PHP script."
 	},
 	"Var Dump / Die": {
-		"prefix": [
-			"vdd"
-		],
+		"prefix": "vdd",
 		"body": [
 			"var_dump($1); die;"
 		],
@@ -40,9 +34,7 @@
 		"description": "Symphony dump and die function."
 	},
 	"Var Dump Config": {
-		"prefix": [
-			"vdc"
-		],
+		"prefix": "vdc",
 		"body": [
 			"ini_set('xdebug.var_display_max_depth', 10);",
 			"ini_set('xdebug.var_display_max_children', 256);",
@@ -51,7 +43,7 @@
 		"description": "XDebug runtime config."
 	},
 	"Custom var_dump": {
-		"prefix": "custom_vd",
+		"prefix": "cvd",
 		"body": [
             "function d(...$$variables) {",
             "    foreach ($$variables as $$variable) {",
@@ -84,12 +76,13 @@
 		"description": "Custom var_dump function to display key-value pairs with type information."
 	},
 	"Todo": {
-		"prefix": [
-			"todo"
-		],
-		"body": [
-			"// TODO: $1"
-		],
+		"prefix": "td",
+		"body": "// TODO: $1",
 		"description": "Empty todo comment."
+	},
+	"Exception stack trace echo": {
+		"prefix": "etrace",
+		"body": "echo '<pre>' . $$e->getTraceAsString() . '</pre>';",
+		"description": "Echo a catched Exception stack trace within pre tag."
 	},
 }
