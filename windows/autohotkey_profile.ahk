@@ -44,4 +44,6 @@ DisableRAltDown()
     )::]
     =::}
     e::€
+
+    Backspace::Delete
 #If
