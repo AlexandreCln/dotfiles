@@ -1,6 +1,6 @@
 ; To view Virtual Key Codes and Scan Codes, Open the main window of a running .ahk file. 
-; Next, select “Key history and script info” from the top View menu. The left-most column displays 
-; the Virtual Key Code for any pressed key while the second column displays the Scan Code—both in hexadecimal. 
+; Then, select View > “Key history and script info”. The column `VK` displays the Virtual Key Code
+; for any pressed key, the column `SC` displays the Scan Code—both in hexadecimal. 
 
 global RAltDown
 RAltDown = false
@@ -18,20 +18,21 @@ DisableRAltDown()
 *RAlt up::DisableRAltDown()
 
 #If (%RAltDown% = true)
-    ; arrow keys
+    ; ARROW KEYS
     p::up
     l::left
     m::down
     SC028::right ; ù
 
-    ; home & end
+    ; HOME & END
     o::home
     ^::end
 
-    ; page up & down
+    ; PAGE UP & DOWN
     i::PgUp
     $::PgDn
 
+    ; ALT CHARS
     SC003::Send ~{space} ; é
     "::#
     '::{
@@ -47,3 +48,22 @@ DisableRAltDown()
 
     Backspace::Delete
 #If
+
+; Google search clipboard
+#s::
+{
+ Send, ^c
+ Sleep 50
+ Run, https://www.google.com/search?q=%clipboard%
+ Return
+}
+
+; Replace Win (#) + < with «
+#<::
+Send, «
+return
+
+; Replace Win (#) + Shift (+) + > with »
+#+>::
+Send, »
+return
