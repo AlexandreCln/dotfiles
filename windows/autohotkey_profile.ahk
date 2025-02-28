@@ -2,6 +2,23 @@
 ; Then, select View > “Key history and script info”. The column `VK` displays the Virtual Key Code
 ; for any pressed key, the column `SC` displays the Scan Code—both in hexadecimal. 
 
+; Toggle Terminal with Alt+T
+!t::
+    if WinActive("ahk_class CASCADIA_HOSTING_WINDOW_CLASS")
+    {
+        WinMinimize
+    }
+    else if WinExist("ahk_class CASCADIA_HOSTING_WINDOW_CLASS")
+    {
+        WinActivate
+    }
+    else
+    {
+        Run wt.exe
+    }
+return
+
+; Easy motions
 global RAltDown
 RAltDown = false
 
